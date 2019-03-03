@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+
+    body {
+      font-family: Kanit;
+    }
+    a:link 
+    { 
+    text-decoration:none; 
+    color:black;
+    } 
+    a:hover{
+        text-decoration: underline;
+        color:red;
+    }
+    a:visited{
+        color:black;
+    }
+    .tweet {
+      border: 5px solid #263B80;
+      padding: 25px 50px;
+      max-width: 300px;
+      background: white;
+    }
+    .tweet .follow {
+      display: block;
+      background-color: #f5f8fa;
+      background-image: linear-gradient(#fff, #f5f8fa);
+      border: 1px #e1e8ed solid;
+      border-radius: 5px;
+      color: black;
+      padding: 5px;
+      margin-top: 9px;
+      float: right;
+      text-align: center;
+      text-decoration: none;
+    }
+    .tweet .follow:hover {
+      background-color: #e1e8ed;
+      background-image: linear-gradient(#fff, #e1e8ed);
+    }
+    .tweet .follow:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .tweet .follow i {
+      color: #55acee;
+      padding-right: 5px;
+    }
+    .tweet--user:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .tweet--user-avatar {
+      border-radius: 5px;
+      float: left;
+      margin-right: 10px;
+      url-
+    }
+    .tweet--user-name {
+      font-weight: bold;
+      padding-top: 9px;
+    }
+    .tweet--user-name span {
+      font-weight: normal;
+      color: #999;
+      font-size: 0.8em;
+      display: block;
+    }
+    .tweet--body {
+      margin: 20px 0 5px;
+      font-size: 1em;
+    }
+    .tweet--time {
+      font-weight: normal;
+      color: #999;
+      font-size: 0.8em;
+    }
+    .tweet--actions {
+      margin-top: 20px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+    .tweet--actions [class*="fa-"] {
+      float: right;
+      margin-left: 20px;
+      color: #999;
+    }
+    .tweet--actions [class*="fa-"].fa-heart:hover {
+      color: #DD2E44;
+    }
+    .tweet--actions [class*="fa-"]:hover {
+      color: #4A913C;
+      cursor: pointer;
+    }
+    .tweet--actions [class*="fa-"]:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .tweet--actions span {
+      color: #999;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+
+  </head>
+  <body>
+
+<div class="tweet" id="tweet1">
+  <a href="https://www.twitter.com/avecle6" target="_blank" class="follow"><i class="fa fa-twitter"></i>Follow</a>
+  
+  <div class="tweet--user">
+    <img class="tweet--user-avatar" src="" alt="" />
+    <div class="tweet--user-name"><span>@avecle6</span></div>
+  </div>
+  
+  <p class="tweet--body" id="contentTweet1" ></p>
+  
+  <div class="tweet--time" id="time1"></div>
+  
+
+</div>
+<br>
+ <div class="tweet" id="tweet2">
+  <a href="https://www.twitter.com/avecle6" target="_blank" class="follow"><i class="fa fa-twitter"></i>Follow</a>
+  
+  <div class="tweet--user">
+    <img class="tweet--user-avatar" src="" alt="" />
+    <div class="tweet--user-name"><span>@avecle6</span></div>
+  </div>
+  
+  <p class="tweet--body" id="contentTweet2"></p>
+  
+  <div class="tweet--time" id="time2"></div>
+  
+
+</div>
+<br>
+<div class="tweet" id="tweet3">
+  <a href="https://www.twitter.com/avecle6" target="_blank" class="follow"><i class="fa fa-twitter"></i>Follow</a>
+  
+  <div class="tweet--user">
+    <img class="tweet--user-avatar" src="" alt="" />
+    <div class="tweet--user-name"><span>@avecle6</span></div>
+  </div>
+  
+  <p class="tweet--body" id="contentTweet3"></p>
+  
+  <div class="tweet--time" id="time3"></div>
+  
+
+</div>
+      
+      
+<script>
+      $(function(){
+        $.getJSON("https://paulsouille.fr/ynaa/index.php", function( jsonData ) {
+            var lastTweet = [];
+            $.each(jsonData, function(i, data) {
+                if(!data.in_reply_to_status_id){
+                    lastTweet.push(data);
+                    
+                }
+            })
+            $('#contentTweet1').html(lastTweet[0].text.split('https')[0]);
+            $('#contentTweet2').html(lastTweet[1].text.split('https')[0]);
+            $('#contentTweet3').html(lastTweet[2].text.split('https')[0]);
+            $('.tweet--user-avatar').attr("src",lastTweet[0].user.profile_image_url)
+            $('.tweet--user-name').html("<a href = 'https://www.twitter.com/avecle6' target=`_blank`>"+lastTweet[0].user.name+"<span><a href = 'https://www.twitter.com/avecle6' target=`_blank`>@avecle6</a></span>")
+
+
+
+
+        });
+      })
+</script>
+  </body>
+</html>
+

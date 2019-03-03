@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Avenir;
+    }
+
+    a:link {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    a:visited {
+      color: rgb(0, 0, 0);
+    }
+
+    .tweet {
+      border: 1px solid #223983;
+      padding-top: 20px;
+      padding-bottom: 5px;
+      padding-left: 20px;
+      padding-right: 10px;
+      background: white;
+      max-width: 400px;
+      max-height: 125px;
+    }
+
+    .tweet--user:after {
+      display: block;
+      clear: both;
+    }
+
+    .tweet--user-avatar {
+      border-radius: 2px;
+      float: left;
+      margin-right: 20px;
+      height: 65px;
+      width: 65px;
+      margin-top: 10px
+    }
+
+    .tweet--user-name {
+      font-weight: bold;
+      color: #999;
+
+      font-size: 14px;
+
+    }
+
+    .tweet--body {
+      margin: 0px 0 20px;
+      margin-left: 85px;
+      font-size: 12px;
+      color: #192137;
+    }
+
+    .tweet--time {
+      font-weight: normal;
+      color: #999;
+      font-size: 0.8em;
+    }
+
+    .tweet--actions {
+      margin-top: 20px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    .tweet--actions [class*="fa-"] {
+      float: right;
+      margin-left: 20px;
+      color: #999;
+    }
+
+    .tweet--actions [class*="fa-"].fa-heart:hover {
+      color: #DD2E44;
+    }
+
+    .tweet--actions [class*="fa-"]:hover {
+      color: #4A913C;
+      cursor: pointer;
+    }
+
+    .tweet--actions [class*="fa-"]:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .tweet--actions span {
+      color: #999;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+
+    .tweet-tag {
+      color: blue !important;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Avenir' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <div class="tweet" id="tweet1">
+    <img class="tweet--user-avatar" src="https://pbs.twimg.com/profile_images/1017323711425282048/sIRToxMw_400x400.jpg"
+      alt="" />
+
+    <div class="tweet--user">
+      <div class="tweet--user-name"><span class="tweet-tag">@avecle6</span></div>
+    </div>
+
+    <p class="tweet--body" id="contentTweet1"></p>
+
+    <div class="tweet--time" id="time1"></div>
+
+
+  </div>
+
+  <br>
+  <div class="tweet" id="tweet2">
+    <img class="tweet--user-avatar" src="https://pbs.twimg.com/profile_images/1017323711425282048/sIRToxMw_400x400.jpg"
+      alt="" />
+
+    <div class="tweet--user">
+      <div class="tweet--user-name"><span class="tweet-tag">@avecle6</span></div>
+    </div>
+
+    <p class="tweet--body" id="contentTweet2"></p>
+
+    <div class="tweet--time" id="time1"></div>
+
+
+  </div>
+
+  <br>
+  <div class="tweet" id="tweet3">
+    <img class="tweet--user-avatar" src="https://pbs.twimg.com/profile_images/1017323711425282048/sIRToxMw_400x400.jpg"
+      alt="" />
+
+    <div class="tweet--user">
+      <div class="tweet--user-name"><span class="tweet-tag">@avecle6</span></div>
+    </div>
+
+    <p class="tweet--body" id="contentTweet3"></p>
+
+    <div class="tweet--time" id="time1"></div>
+
+
+  </div>
+
+  <br>
+
+  <script>
+    $(function () {
+      $.getJSON("/troma/tweet.php", function (jsonData) {
+        var lastTweet = [];
+        $.each(jsonData, function (i, data) {
+          if (!data.in_reply_to_status_id) {
+            lastTweet.push(data);
+
+          }
+        })
+
+        $('#contentTweet1').html(lastTweet[0].text.split('https')[0].substring(0,lastTweet[0].text.split('https')[0].length-18)+'...');
+        $('#contentTweet2').html(lastTweet[1].text.split('https')[0].substring(0,lastTweet[1].text.split('https')[0].length-18)+'...');
+        $('#contentTweet3').html(lastTweet[2].text.split('https')[0].substring(0,lastTweet[2].text.split('https')[0].length-18)+'...');
+        $('.tweet--user-name').html("<a href = 'https://www.twitter.com/avecle6' target=`_blank`>" + lastTweet[
+            0].user.name +
+          "<span ><a class='tweet-tag' href = 'https://www.twitter.com/avecle6' target=`_blank`>  @avecle6</a></span>"
+        )
+
+
+
+
+      });
+    })
+  </script>
+</body>
+
+</html>
