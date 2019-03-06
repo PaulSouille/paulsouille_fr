@@ -171,7 +171,7 @@
                     <h1 class="h1" id="foo">Paul Souillé </h1>
 
                     <div style="display:none" class = "h3" id="typed-strings">
-                
+                        <!-- Je suis disponible pour discuter d'une offre d'alternance :)-->
                         <p>Je suis Développeur</p>
                         <p>Je suis Alternant</p>
                         <p>Je suis Etudiant</p>
@@ -240,7 +240,7 @@
 
                         <a href="./assets/PaulSouille_CV.pdf">
 
-                            <sm>Téléchargez mon CV !</sm>
+                            <sm>Télécharger mon CV !</sm>
 
                         </a>
 
@@ -290,7 +290,7 @@
 
                     <br/>
 
-                    <i>1 an</i>
+                    <i>3 ans</i>
 
                 </p>
 
@@ -1375,6 +1375,30 @@
 
 
   });
+
+
+    
+
+
+
+  var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+    n = 0;
+    $(document).keydown(function (e) {
+        if (e.keyCode === k[n++]) {
+            if (n === k.length) {
+                $( "*" ).each(function(key,value){
+                $(this).css( "color", '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6) )
+                $(this).css( "background-color", '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6) )
+
+            })
+                n = 0;
+                return false;
+            }
+        }
+        else {
+            n = 0;
+        }
+    });
     </script>
 
 
