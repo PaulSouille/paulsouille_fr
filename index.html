@@ -445,21 +445,45 @@
     </script>
     <script>
         $(document).ready(function () {
-            document.addEventListener('mousemove', function (event) {
-                yMouse = event.pageY;
-                //First div
-                firstDivTop = $('#intro').offset().top;
-                firstDivBottom = firstDivTop + $('#intro').outerHeight(true);
-                if (yMouse > firstDivTop && yMouse < firstDivBottom) {
-                    //console.log('Le curseur est dans la div');
+            $(window).scroll('scoll', function () {
+                let resumeTop = $('#resume').offset().top; //get the offset top of the element
+                resumeTop = resumeTop - $(window).scrollTop();
+                let skillTop = $('#skill').offset().top;
+                skillTop = skillTop - $(window).scrollTop();
+
+                let workTop = $('#work').offset().top; //get the offset top of the element
+                workTop = workTop - $(window).scrollTop();
+                let contactTop = $('#contact').offset().top;
+                contactTop = contactTop - $(window).scrollTop();
+
+                let buttonTop1 = $('.bar1').offset().top; //get the offset top of the element
+                buttonTop1 = buttonTop1 - $(window).scrollTop();
+                let buttonTop2 = $('.bar2').offset().top; //get the offset top of the element
+                buttonTop2 = buttonTop2 - $(window).scrollTop();
+                let buttonTop3 = $('.bar3').offset().top; //get the offset top of the element
+                buttonTop3 = buttonTop3 - $(window).scrollTop();
+
+
+
+                if ((resumeTop < buttonTop1 && skillTop > buttonTop1) || (workTop < buttonTop1 && contactTop > buttonTop1)) {
+                    $('.bar1').css('background-color', '#000');
+                } else {
+                    $('.bar1').css('background-color', '#FFF');
                 }
-                //second div
-                secondDivTop = $('#skillswrap').offset().top;
-                secondDivBottom = secondDivTop + $('#skillswrap').outerHeight(true);
-                if (yMouse > secondDivTop && yMouse < secondDivBottom) {
-                    //console.log('Le curseur est dans la div');
+                if ((resumeTop < buttonTop2 && skillTop > buttonTop2)|| (workTop < buttonTop2 && contactTop > buttonTop2)) {
+                    $('.bar2').css('background-color', '#000');
+                } else {
+                    $('.bar2').css('background-color', '#FFF');
                 }
+                if ((resumeTop < buttonTop3 && skillTop > buttonTop3)|| (workTop < buttonTop3 && contactTop > buttonTop3)) {
+                    $('.bar3').css('background-color', '#000');
+                } else {
+                    $('.bar3').css('background-color', '#FFF');
+                }
+
+
             })
+
             document.addEventListener('scroll', function (event) {
                 if ($(document).scrollTop() > 20) {
                     $('.backTop').fadeIn();
@@ -620,20 +644,20 @@
         function openNav() {
             isMenuDisplayed = true;
             document.getElementById("mySidenav").style.width = "250px";
+            $('#containerButton').fadeOut(500);
+
         }
 
         function closeNav() {
             isMenuDisplayed = false;
             document.getElementById("mySidenav").style.width = "0";
-            $('#containerButton').attr("class", "containerButton");
+            $('#containerButton').fadeIn(500);
+
         }
 
         function updateButton(x) {
             if (x.classList.value == "containerButton") {
                 openNav();
-                $('#containerButton').attr("class", "containerButton change");
-
-
             } else {
                 closeNav();
             }
