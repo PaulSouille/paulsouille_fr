@@ -339,6 +339,43 @@
                 </div>
                 <div class="col-lg-6">
                     <p class="foo">
+                        <a id="single_1" href="assets/img/marieetpierre.PNG" title="Hackath'Yon">
+                            <img class="img-responsive" src="assets/img/marieetpierre.PNG" alt="">
+                        </a>
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p class="foo">Marie et Pierre 2020</p>
+                    <p class="foo">
+                        <more>Création du site de mariage de Marie SOUILLE et Pierre Flambard.<br><a href="https://marieetpierre2020.fr/" target="_blank">Accéder au site</a>
+                            <br />
+                            <br />
+                            <sm>
+                                <i class="icon-tag"></i> Front-end</sm>
+                        </more>
+                    </p>
+                </div>
+                <div class="col-lg-6 col-lg-offset-3">
+                    <p class="foo">
+                        <a id="single_1" href="assets/img/marieetpierre2.PNG" title="Hackath'yon">
+                            <img class="img-responsive" src="assets/img/marieetpierre2.PNG" alt="">
+                        </a>
+                    </p>
+                </div>
+                <div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+
+        <div class="container desc">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-1">
+                    <h5 class="foo"></h5>
+                </div>
+                <div class="col-lg-6">
+                    <p class="foo">
                         <a id="single_1" href="assets/img/port01.png" title="Hackath'Yon">
                             <img class="img-responsive" src="assets/img/port01.png" alt="">
                         </a>
@@ -368,6 +405,9 @@
             <br>
             <br>
         </div>
+
+
+        
         <section id="contact" name="contact"></section>
         <div id="footwrap">
             <div class="container">
@@ -397,8 +437,7 @@
                             <sm>Réseaux sociaux</sm>
                         </p>
                         <p>
-                            <a class="foo" target="_blank"
-                                href="https://www.linkedin.com/in/paul-souill%C3%A9-a08380140/">
+                            <a class="foo" target="_blank" href="https://www.linkedin.com/in/paul-souill%C3%A9-a08380140/">
                                 <i class="icon-linkedin"></i>
                             </a>
                             <a class="foo" target="_blank" href="https://github.com/PaulSouille">
@@ -462,24 +501,24 @@
                 let buttonTop3 = $('.bar3').offset().top; //get the offset top of the element
                 buttonTop3 = buttonTop3 - $(window).scrollTop();
 
-
-
-                if ((resumeTop < buttonTop1 && skillTop > buttonTop1) || (workTop < buttonTop1 && contactTop > buttonTop1)) {
+                if ((resumeTop < buttonTop1 && skillTop > buttonTop1) || (workTop < buttonTop1 &&
+                        contactTop > buttonTop1)) {
                     $('.bar1').css('background-color', '#000');
                 } else {
                     $('.bar1').css('background-color', '#FFF');
                 }
-                if ((resumeTop < buttonTop2 && skillTop > buttonTop2)|| (workTop < buttonTop2 && contactTop > buttonTop2)) {
+                if ((resumeTop < buttonTop2 && skillTop > buttonTop2) || (workTop < buttonTop2 &&
+                        contactTop > buttonTop2)) {
                     $('.bar2').css('background-color', '#000');
                 } else {
                     $('.bar2').css('background-color', '#FFF');
                 }
-                if ((resumeTop < buttonTop3 && skillTop > buttonTop3)|| (workTop < buttonTop3 && contactTop > buttonTop3)) {
+                if ((resumeTop < buttonTop3 && skillTop > buttonTop3) || (workTop < buttonTop3 &&
+                        contactTop > buttonTop3)) {
                     $('.bar3').css('background-color', '#000');
                 } else {
                     $('.bar3').css('background-color', '#FFF');
                 }
-
 
             })
 
