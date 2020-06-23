@@ -46,3 +46,7 @@ body {
     border-width: 2px;
     border-color: black;
 }
+
+.skill_details {
+    font-size: 13px;
+}
