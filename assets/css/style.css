@@ -49,4 +49,9 @@ body {
 
 .skill_details {
     font-size: 13px;
+    cursor: pointer !important;
 }
+.selected_skill{
+    border-style: solid;
+}
+
