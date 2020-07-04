@@ -11,8 +11,8 @@
       <link rel="icon" href="assets/img/avatar_paul.png" />
       <title>Paul Souillé</title>
       <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-      <link href="assets/css/main.css" rel="stylesheet">
       <link href="assets/css/style.css" rel="stylesheet">
+      <link href="assets/css/main.css" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/font-awesome.min.css">
       <link href="assets/css/animate.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
@@ -33,7 +33,16 @@
       <div class="bar2"></div>
       <div class="bar3"></div>
    </div>
-   <body data-spy="scroll" data-offset="0" data-target="#nav">
+   <div class="darkmode">
+        <i class="icon-moon moon"></i>
+        <div class="theme-switch">
+            <div class="switch"></div>
+        </div>
+        <i class="icon-sun sun"></i>
+
+   </div>
+
+     <body data-spy="scroll" data-offset="0" data-target="#nav">
       <div id="content">
          <div id="headerwrap">
             <div class="container">
@@ -52,6 +61,7 @@
                </div>
             </div>
          </div>
+
          <section id="about" name="about"></section>
          <div id="intro">
             <div class="container">
@@ -76,7 +86,7 @@
                </div>
             </div>
          </div>
-         <section id="resume" name="resume"></section>
+         <section id="resume" name="resume">
          <div class="container desc">
             <div class="row">
                <div class="col-lg-2 col-lg-offset-1">
@@ -222,6 +232,7 @@
             </div>
             <br>
          </div>
+         </section>
          <section id="skill" name="skill"></section>
          <div id="skillswrap">
             <div class="container">
@@ -352,47 +363,47 @@
         
          </div>
          <section id="contact" name="contact"></section>
-         <div id="footwrap">
+         <div id="footwrap" class="reveal">
             <div class="container">
                <div class="row">
                   <div class="col-lg-2 col-lg-offset-1">
-                     <h5 class="reveal">CONTACT</h5>
+                     <h5 >CONTACT</h5>
                   </div>
                   <div class="col-lg-6">
-                     <p class="reveal">
+                     <p >
                         <t>Email</t>
                         <br /> paul.souille85@gmail.com
                         <br />
                      </p>
-                     <p class="reveal">
+                     <p >
                         <t>Adresse</t>
                         <br />Nantes, France.
                         <br />
                      </p>
-                     <p class="reveal">
+                     <p >
                         <t>Téléphone</t>
                         <br /> +33 6 17 33 52 49
                         <br />
                      </p>
                   </div>
                   <div class="col-lg-3">
-                     <p class="reveal">
+                     <p >
                         <sm>Réseaux sociaux</sm>
                      </p>
                      <p>
-                        <a class="reveal" target="_blank"
+                        <a  target="_blank"
                            href="https://www.linkedin.com/in/paul-souill%C3%A9-a08380140/">
                         <i class="icon-linkedin"></i>
                         </a>
-                        <a class="reveal" target="_blank" href="https://github.com/PaulSouille">
+                        <a  target="_blank" href="https://github.com/PaulSouille">
                         <i class="icon-github"></i>
                         </a>
-                        <a class="reveal" target="_blank" href="https://twitter.com/PaulSouille">
+                        <a  target="_blank" href="https://twitter.com/PaulSouille">
                         <i class="icon-twitter"></i>
                         </a>
                      </p>
                      <p>
-                        <a class="reveal" target="_blank" href="https://github.com/PaulSouille/paulsouille_fr">
+                        <a  target="_blank" href="https://github.com/PaulSouille/paulsouille_fr">
                         Accéder au code source
                      </p>
                   </div>
@@ -410,19 +421,6 @@
     <script src="assets/js/jquery.textillate.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
-    </script>
-    <script type="text/javascript" src="assets/fancybox-2.1.7/lib/jquery.mousewheel.pack.js"></script>
-    <link rel="stylesheet" href="assets/fancybox-2.1.7/source/jquery.fancybox.css?v=2.1.7" type="text/css"
-        media="screen" />
-    <script type="text/javascript" src="assets/fancybox-2.1.7/source/jquery.fancybox.pack.js?v=2.1.7"></script>
-    <link rel="stylesheet" href="assets/fancybox-2.1.7/source/helpers/jquery.fancybox-buttons.css?v=1.0.5"
-        type="text/css" media="screen" />
-    <script type="text/javascript" src="assets/fancybox-2.1.7/source/helpers/jquery.fancybox-buttons.js?v=1.0.5">
-    </script>
-    <script type="text/javascript" src="assets/fancybox-2.1.7/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-    <link rel="stylesheet" href="assets/fancybox-2.1.7/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7"
-        type="text/css" media="screen" />
-    <script type="text/javascript" src="assets/fancybox-2.1.7/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7">
     </script>
     <script>
         $(document).ready(function () {
@@ -446,20 +444,55 @@
 
                 if ((resumeTop < buttonTop1 && skillTop > buttonTop1) || (workTop < buttonTop1 &&
                         contactTop > buttonTop1)) {
-                    $('.bar1').css('background-color', '#000');
+                    if($("body").hasClass('dark-theme')){
+                        $('.bar1').css('background-color', '#f85c37');
+                        $('.sun').css('color','white');
+                        $('.moon').css('color','white');
+                    } else {
+                        $('.bar1').css('background-color', '#000');
+                        $('.sun').css('color','black');
+                        $('.moon').css('color','black');
+                    }
+
                 } else {
+                    console.log('white')
+                    $('.sun').css('color','white');
+                    $('.moon').css('color','white');
                     $('.bar1').css('background-color', '#FFF');
                 }
                 if ((resumeTop < buttonTop2 && skillTop > buttonTop2) || (workTop < buttonTop2 &&
                         contactTop > buttonTop2)) {
-                    $('.bar2').css('background-color', '#000');
+                    if($("body").hasClass('dark-theme')){
+                        $('.bar2').css('background-color', '#f85c37');
+                        $('.sun').css('color','white');
+                        $('.moon').css('color','white');
+                    } else {
+                        $('.bar2').css('background-color', '#000');
+                        $('.sun').css('color','black');
+                        $('.moon').css('color','black');   
+                    }   
                 } else {
+                    console.log('white')
+                    $('.sun').css('color','white');
+                    $('.moon').css('color','white');
                     $('.bar2').css('background-color', '#FFF');
                 }
                 if ((resumeTop < buttonTop3 && skillTop > buttonTop3) || (workTop < buttonTop3 &&
                         contactTop > buttonTop3)) {
-                    $('.bar3').css('background-color', '#000');
-                } else {
+                    if($("body").hasClass('dark-theme')){
+                        $('.bar3').css('background-color', '#f85c37');
+                        $('.sun').css('color','white');
+                        $('.moon').css('color','white');
+                    } else {
+                        $('.bar3').css('background-color', '#000');
+                        $('.sun').css('color','black');
+                        $('.moon').css('color','black');  
+                    }          
+                } 
+                else {
+                    console.log('white')
+                    $('.sun').css('color','white');
+                    $('.moon').css('color','white');
                     $('.bar3').css('background-color', '#FFF');
                 }
 
@@ -489,71 +522,9 @@
                 }
             });
         })
-        $(function () {
-            $('.h3').textillate({
-                in: {
-                    effect: 'rollIn'
-                }
-            });
-        })
+
     </script>
-    <script>
-        window.twttr = (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            t._e = [];
-            t.ready = function (f) {
-                t._e.push(f);
-            };
-            return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("#single_1").fancybox({
-                helpers: {
-                    title: {
-                        type: 'float'
-                    }
-                }
-            });
-            $("#single_2").fancybox({
-                openEffect: 'elastic',
-                closeEffect: 'elastic',
-                helpers: {
-                    title: {
-                        type: 'inside'
-                    }
-                }
-            });
-            $("#single_3").fancybox({
-                openEffect: 'none',
-                closeEffect: 'none',
-                helpers: {
-                    title: {
-                        type: 'outside'
-                    }
-                }
-            });
-            $("#single_4").fancybox({
-                helpers: {
-                    title: {
-                        type: 'over'
-                    }
-                }
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".fancybox").fancybox();
-        });
-    </script>
+
     <script>
         $(function () {
             if (window._userdata && _userdata.page_desktop) window.location = _userdata.page_desktop;
@@ -696,6 +667,12 @@
          $('.skill_hammer_3').click(function(event) {
             selectSkill(this, 'hammer_3');
          });
+
+         $(".theme-switch").on("click", function() {
+            $("body").toggleClass("dark-theme");
+            $("#intro").toggleClass("dark");
+
+        });
     </script>
 </body>
 

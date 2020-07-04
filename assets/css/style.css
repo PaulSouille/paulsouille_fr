@@ -1,3 +1,4 @@
+
 body {
     padding: 0;
     margin: 0;
@@ -216,3 +217,126 @@ body {
 	transition: top .9s;
 }
 
+
+.moon{
+	font-size: 29px;
+	padding-left: 60px;
+	color:white;
+	top: 40px;
+	left: 75px;
+	position:fixed;
+}
+
+.sun{
+	font-size: 29px;
+	padding-left: 60px;
+	color:white;
+    top: 40px;
+    left: -30px;
+	position:fixed;
+}
+
+
+.darkmode{
+	position: fixed;
+    top: 40px;
+    left: 60px;
+	z-index: 99;
+	text-align: center;
+}
+
+.theme-switch {
+	color: #fff;
+	position: fixed;
+
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+	padding: 15px;
+	width: 70px;
+	height: 30px;
+	border-radius: 50px;
+	background:  #f85c37;
+
+}
+
+.theme-switch .switch {
+	background: white;
+	width: 24px;
+	height: 24px;
+	background: #FFF;
+	border-radius: 100%;
+	position: absolute;
+	top: 3px;
+	left: 4px;
+	transition: 0.5s all ease;
+}
+  
+.dark-theme .theme-switch {
+	background: #000;
+	border: solid 1px;
+}
+.dark-theme .theme-switch .switch {
+	transform: translateX(37px);
+}
+
+.dark-theme #intro {
+	background: #15202b; 
+}
+.dark-theme #resume {
+	background: #000; 
+}
+
+
+.dark-theme .desc p {
+	color: #FFF;
+}
+
+.dark-theme .desc t {
+	color: #FFF;
+}
+
+.dark-theme .desc imp {
+	padding: 6px;
+	color: white;
+	background: #15202b;
+}
+
+.dark-theme .desc more {
+	color: #95a5a6;
+}
+
+.dark-theme h5 {
+	color: white;
+}
+
+.dark-theme .backTop {
+	background-color: #15202b;
+}
+
+.dark-theme #skillswrap {
+	background-color: #15202b;
+}
+
+.dark-theme #portfolio {
+	background: #000; 
+}
+
+.dark-theme #portfolio div:nth-child(odd) section {
+	background-color: #222222;
+	padding: 10px;
+	border: 3px solid #2f2f2f;
+}
+
+.dark-theme #portfolio div:nth-child(even) section {
+	background-color: #222222;
+	padding: 10px;
+	border: 3px solid #2f2f2f;
+}
+
+.dark-theme .sun {
+	color: white;
+}
+.dark-theme .moon {
+	color: white;
+}
