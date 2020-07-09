@@ -27,22 +27,16 @@
       <a class="js-scrollTo" href="#skill">Compétences</a>
       <a class="js-scrollTo" href="#work">Expérience</a>
       <a class="js-scrollTo" href="#contact">Contact</a>
+      <div class="darkmode">
+         <p class="theme-switch">Passer le site en mode sombre</p>
+    </div>
    </div>
    <div id="containerButton" class="containerButton" onclick="updateButton(this)">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
    </div>
-   <div class="darkmode">
-        <i class="icon-moon moon"></i>
-        <div class="theme-switch">
-            <div class="switch"></div>
-        </div>
-        <i class="icon-sun sun"></i>
-
-   </div>
-
-     <body data-spy="scroll" data-offset="0" data-target="#nav">
+   <body data-spy="scroll" data-offset="0" data-target="#nav">
       <div id="content">
          <div id="headerwrap">
             <div class="container">
@@ -57,11 +51,12 @@
                      <span class="h3" id="typed"></span>
                   </div>
                   <br>
+                  <img id="light_avatar" class="avatar" src="./assets/img/avatar_paul.png">
+                  <img id="dark_avatar" class="avatar" style="display:none;" src="./assets/img/avatar_paul_2.png">
                   <!--<img style="width: 200px; height: 186px;" src="./assets/img/avatar_paul.png">-->
                </div>
             </div>
          </div>
-
          <section id="about" name="about"></section>
          <div id="intro">
             <div class="container">
@@ -87,151 +82,151 @@
             </div>
          </div>
          <section id="resume" name="resume">
-         <div class="container desc">
-            <div class="row">
-               <div class="col-lg-2 col-lg-offset-1">
-                  <h5 class="reveal">Etudes</h5>
+            <div class="container desc">
+               <div class="row">
+                  <div class="col-lg-2 col-lg-offset-1">
+                     <h5 class="reveal">Etudes</h5>
+                  </div>
+                  <div class="col-lg-6">
+                     <p class="reveal">
+                        <t>Etudiant à l'EPSI Nantes</t>
+                        <br /> Campus HEP
+                        <br />
+                        <i>3 ans</i>
+                     </p>
+                  </div>
+                  <div class="col-lg-3">
+                     <p class="reveal">
+                        <imp>
+                           <sm>Actuellement</sm>
+                        </imp>
+                     </p>
+                  </div>
+                  <div class="col-lg-6 col-lg-offset-3">
+                     <p class="reveal">
+                        <t>Brevet de Technicien Supérieur Service informatique aux organisations option SLAM</t>
+                        <br /> Lycée Notre Dame du Roc
+                        <br />
+                        <i>2 ans</i>
+                     </p>
+                  </div>
+                  <div class="col-lg-3">
+                     <p class="reveal">
+                        <imp>
+                           <sm>Admis</sm>
+                        </imp>
+                     </p>
+                  </div>
+                  <div class="col-lg-6 col-lg-offset-3">
+                     <p class="reveal">
+                        <t>Baccalauréat STMG</t>
+                        <br /> Lycée Sainte Marie du port
+                        <br />
+                        <i>3 ans</i>
+                     </p>
+                  </div>
+                  <div class="col-lg-3">
+                     <p class="reveal">
+                        <imp>
+                           <sm>Mention Assez Bien</sm>
+                        </imp>
+                     </p>
+                  </div>
                </div>
-               <div class="col-lg-6">
-                  <p class="reveal">
-                     <t>Etudiant à l'EPSI Nantes</t>
-                     <br /> Campus HEP
-                     <br />
-                     <i>3 ans</i>
-                  </p>
-               </div>
-               <div class="col-lg-3">
-                  <p class="reveal">
-                     <imp>
+               <br>
+               <hr>
+            </div>
+            <div class="container desc">
+               <div class="row">
+                  <div class="col-lg-2 col-lg-offset-1">
+                     <h5 class="reveal">Expérience Professionnelle</h5>
+                  </div>
+                  <div class="col-lg-6">
+                     <p class="reveal">
+                        <t>Alternance à Claranet</t>
+                        <br />
+                        <a href="https://www.claranet.fr/" target="_blank">Claranet</a>
+                        <br />
+                     </p>
+                     <p>
+                        <more></more>
+                     </p>
+                  </div>
+                  <div class="col-lg-3">
+                     <p class="reveal">
                         <sm>Actuellement</sm>
-                     </imp>
-                  </p>
+                     </p>
+                  </div>
+                  <div class="col-lg-6 col-lg-offset-3">
+                     <p class="reveal">
+                        <t>Stage de deuxième année de BTS SIO</t>
+                        <br />
+                        <a href="https://www.vendelis.com" target="_blank">Vendelis</a>
+                        <br />
+                     </p>
+                     <p>
+                        <more></more>
+                     </p>
+                  </div>
+                  <div class="col-lg-3">
+                     <p class="reveal">
+                        <sm>Janvier-Février 2018</sm>
+                     </p>
+                  </div>
+                  <div class="col-lg-6 col-lg-offset-3">
+                     <p class="reveal">
+                        <t>Stage de première année de BTS SIO</t>
+                        <br /> Groupe Bénéteau
+                        <br />
+                     </p>
+                     <p class="reveal">
+                        <more></more>
+                     </p>
+                  </div>
+                  <div class="col-lg-3">
+                     <p class="reveal">
+                        <sm>Mai-Juin 2017</sm>
+                     </p>
+                  </div>
+                  <div class="col-lg-6 col-lg-offset-3">
+                     <p class="reveal">
+                        <t>Saisonnier au service voirie</t>
+                        <br /> Mairie des Sables d'Olonne
+                        <br />
+                     </p>
+                     <p>
+                        <more></more>
+                     </p>
+                  </div>
+                  <div class="col-lg-3">
+                     <p class="reveal">
+                        <sm>Saison 2016</sm>
+                     </p>
+                  </div>
                </div>
-               <div class="col-lg-6 col-lg-offset-3">
-                  <p class="reveal">
-                     <t>Brevet de Technicien Supérieur Service informatique aux organisations option SLAM</t>
-                     <br /> Lycée Notre Dame du Roc
-                     <br />
-                     <i>2 ans</i>
-                  </p>
-               </div>
-               <div class="col-lg-3">
-                  <p class="reveal">
-                     <imp>
-                        <sm>Admis</sm>
-                     </imp>
-                  </p>
-               </div>
-               <div class="col-lg-6 col-lg-offset-3">
-                  <p class="reveal">
-                     <t>Baccalauréat STMG</t>
-                     <br /> Lycée Sainte Marie du port
-                     <br />
-                     <i>3 ans</i>
-                  </p>
-               </div>
-               <div class="col-lg-3">
-                  <p class="reveal">
-                     <imp>
-                        <sm>Mention Assez Bien</sm>
-                     </imp>
-                  </p>
-               </div>
+               <br>
+               <hr>
             </div>
-            <br>
-            <hr>
-         </div>
-         <div class="container desc">
-            <div class="row">
-               <div class="col-lg-2 col-lg-offset-1">
-                  <h5 class="reveal">Expérience Professionnelle</h5>
+            <div class="container desc">
+               <div class="row">
+                  <div class="col-lg-2 col-lg-offset-1">
+                     <h5 class="reveal">Autres</h5>
+                  </div>
+                  <div class="col-lg-6">
+                     <p class="reveal">
+                        <t>Participation au Hackath'Yon 2017</t>
+                        <br /> Organisé par Code2Be
+                        <br />
+                     </p>
+                  </div>
+                  <div class="col-lg-3">
+                     <p class="reveal">
+                        <sm>Octobre 2017</sm>
+                     </p>
+                  </div>
                </div>
-               <div class="col-lg-6">
-                  <p class="reveal">
-                     <t>Alternance à Claranet</t>
-                     <br />
-                     <a href="https://www.claranet.fr/" target="_blank">Claranet</a>
-                     <br />
-                  </p>
-                  <p>
-                     <more></more>
-                  </p>
-               </div>
-               <div class="col-lg-3">
-                  <p class="reveal">
-                     <sm>Actuellement</sm>
-                  </p>
-               </div>
-               <div class="col-lg-6 col-lg-offset-3">
-                  <p class="reveal">
-                     <t>Stage de deuxième année de BTS SIO</t>
-                     <br />
-                     <a href="https://www.vendelis.com" target="_blank">Vendelis</a>
-                     <br />
-                  </p>
-                  <p>
-                     <more></more>
-                  </p>
-               </div>
-               <div class="col-lg-3">
-                  <p class="reveal">
-                     <sm>Janvier-Février 2018</sm>
-                  </p>
-               </div>
-               <div class="col-lg-6 col-lg-offset-3">
-                  <p class="reveal">
-                     <t>Stage de première année de BTS SIO</t>
-                     <br /> Groupe Bénéteau
-                     <br />
-                  </p>
-                  <p class="reveal">
-                     <more></more>
-                  </p>
-               </div>
-               <div class="col-lg-3">
-                  <p class="reveal">
-                     <sm>Mai-Juin 2017</sm>
-                  </p>
-               </div>
-               <div class="col-lg-6 col-lg-offset-3">
-                  <p class="reveal">
-                     <t>Saisonnier au service voirie</t>
-                     <br /> Mairie des Sables d'Olonne
-                     <br />
-                  </p>
-                  <p>
-                     <more></more>
-                  </p>
-               </div>
-               <div class="col-lg-3">
-                  <p class="reveal">
-                     <sm>Saison 2016</sm>
-                  </p>
-               </div>
+               <br>
             </div>
-            <br>
-            <hr>
-         </div>
-         <div class="container desc">
-            <div class="row">
-               <div class="col-lg-2 col-lg-offset-1">
-                  <h5 class="reveal">Autres</h5>
-               </div>
-               <div class="col-lg-6">
-                  <p class="reveal">
-                     <t>Participation au Hackath'Yon 2017</t>
-                     <br /> Organisé par Code2Be
-                     <br />
-                  </p>
-               </div>
-               <div class="col-lg-3">
-                  <p class="reveal">
-                     <sm>Octobre 2017</sm>
-                  </p>
-               </div>
-            </div>
-            <br>
-         </div>
          </section>
          <section id="skill" name="skill"></section>
          <div id="skillswrap">
@@ -279,8 +274,8 @@
          <section id="work" name="work"></section>
            
 		<section id="portfolio">
-			<br>
-         <div class="container">
+         <br>
+         <div class="container container_portfolio">
             <section class = "reveal">
                   <div class="overlay">
                      <div class="description">
@@ -364,48 +359,52 @@
          </div>
          <section id="contact" name="contact"></section>
          <div id="footwrap" class="reveal">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-2 col-lg-offset-1">
-                     <h5 >CONTACT</h5>
-                  </div>
-                  <div class="col-lg-6">
-                     <p >
-                        <t>Email</t>
-                        <br /> paul.souille85@gmail.com
-                        <br />
-                     </p>
-                     <p >
-                        <t>Adresse</t>
-                        <br />Nantes, France.
-                        <br />
-                     </p>
-                     <p >
-                        <t>Téléphone</t>
-                        <br /> +33 6 17 33 52 49
-                        <br />
-                     </p>
-                  </div>
-                  <div class="col-lg-3">
-                     <p >
-                        <sm>Réseaux sociaux</sm>
-                     </p>
-                     <p>
-                        <a  target="_blank"
-                           href="https://www.linkedin.com/in/paul-souill%C3%A9-a08380140/">
-                        <i class="icon-linkedin"></i>
-                        </a>
-                        <a  target="_blank" href="https://github.com/PaulSouille">
-                        <i class="icon-github"></i>
-                        </a>
-                        <a  target="_blank" href="https://twitter.com/PaulSouille">
-                        <i class="icon-twitter"></i>
-                        </a>
-                     </p>
-                     <p>
-                        <a  target="_blank" href="https://github.com/PaulSouille/paulsouille_fr">
-                        Accéder au code source
-                     </p>
+               <div>
+                  <div class="row">
+                     <div class="col-lg-2 col-lg-offset-1">
+                        <h5 >CONTACT</h5>
+                     </div>
+                     <div class="col-lg-6">
+                        <p >
+                           <t>Email</t>
+                           <br /> paul.souille85@gmail.com
+                           <br />
+                        </p>
+                        <p >
+                           <t>Adresse</t>
+                           <br />Nantes, France.
+                           <br />
+                        </p>
+                        <p >
+                           <t>Téléphone</t>
+                           <br /> +33 6 17 33 52 49
+                           <br />
+                        </p>
+                     </div>
+                     <div class="col-lg-3">
+                        <p >
+                           <sm>Réseaux sociaux</sm>
+                        </p>
+                        <p>
+                           <a  target="_blank"
+                              href="https://www.linkedin.com/in/paul-souill%C3%A9-a08380140/">
+                           <i class="icon-linkedin"></i>
+                           </a>
+                           <a  target="_blank" href="https://github.com/PaulSouille">
+                           <i class="icon-github"></i>
+                           </a>
+                           <a  target="_blank" href="https://twitter.com/PaulSouille">
+                           <i class="icon-twitter"></i>
+                           </a>
+                        </p>
+                        <p>
+                           <a  target="_blank" href="https://github.com/PaulSouille/paulsouille_fr">
+                           Accéder au code source
+                        </p>
+                        <p>
+                           <a  target="_blank" style="color:white;text-decoration: underline" href="https://twitter.com/ToMaBYou">
+                           Avatar by @ToMaBYou
+                        </p>
                   </div>
                </div>
             </div>
@@ -419,10 +418,11 @@
     <script src="assets/js/jquery.lettering.js"></script>
     <script src="https://yandex.st/highlightjs/7.3/highlight.min.js"></script>
     <script src="assets/js/jquery.textillate.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
     <script>
         hljs.initHighlightingOnLoad();
-    </script>
-    <script>
+
         $(document).ready(function () {
             $(window).scroll('scoll', function () {
                 let resumeTop = $('#resume').offset().top; //get the offset top of the element
@@ -446,53 +446,32 @@
                         contactTop > buttonTop1)) {
                     if($("body").hasClass('dark-theme')){
                         $('.bar1').css('background-color', '#f85c37');
-                        $('.sun').css('color','white');
-                        $('.moon').css('color','white');
                     } else {
                         $('.bar1').css('background-color', '#000');
-                        $('.sun').css('color','black');
-                        $('.moon').css('color','black');
                     }
 
                 } else {
-                    console.log('white')
-                    $('.sun').css('color','white');
-                    $('.moon').css('color','white');
                     $('.bar1').css('background-color', '#FFF');
                 }
                 if ((resumeTop < buttonTop2 && skillTop > buttonTop2) || (workTop < buttonTop2 &&
                         contactTop > buttonTop2)) {
                     if($("body").hasClass('dark-theme')){
                         $('.bar2').css('background-color', '#f85c37');
-                        $('.sun').css('color','white');
-                        $('.moon').css('color','white');
                     } else {
                         $('.bar2').css('background-color', '#000');
-                        $('.sun').css('color','black');
-                        $('.moon').css('color','black');   
                     }   
                 } else {
-                    console.log('white')
-                    $('.sun').css('color','white');
-                    $('.moon').css('color','white');
                     $('.bar2').css('background-color', '#FFF');
                 }
                 if ((resumeTop < buttonTop3 && skillTop > buttonTop3) || (workTop < buttonTop3 &&
                         contactTop > buttonTop3)) {
                     if($("body").hasClass('dark-theme')){
                         $('.bar3').css('background-color', '#f85c37');
-                        $('.sun').css('color','white');
-                        $('.moon').css('color','white');
                     } else {
                         $('.bar3').css('background-color', '#000');
-                        $('.sun').css('color','black');
-                        $('.moon').css('color','black');  
-                    }          
+                    }         
                 } 
                 else {
-                    console.log('white')
-                    $('.sun').css('color','white');
-                    $('.moon').css('color','white');
                     $('.bar3').css('background-color', '#FFF');
                 }
 
@@ -513,8 +492,6 @@
                 return false;
             });
         })
-    </script>
-    <script>
         $(function () {
             $('.h1').textillate({
                 in: {
@@ -523,15 +500,19 @@
             });
         })
 
-    </script>
+        $(function () {
+            $('.h3').textillate({
+                in: {
+                    effect: 'rollIn'
+                }
+            });
+        })
 
-    <script>
+
         $(function () {
             if (window._userdata && _userdata.page_desktop) window.location = _userdata.page_desktop;
         });
-    </script>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <script>
+
         window.sr = ScrollReveal({
             reset: true
         });
@@ -667,12 +648,26 @@
          $('.skill_hammer_3').click(function(event) {
             selectSkill(this, 'hammer_3');
          });
-
+         const darkmodeText = {
+         dark: 'Passer le site en mode sombre',
+         white: 'Passer le site en mode clair',
+         };
          $(".theme-switch").on("click", function() {
             $("body").toggleClass("dark-theme");
             $("#intro").toggleClass("dark");
-
+            $('body').hasClass("dark-theme")? $('.theme-switch').text(darkmodeText.white):$('.theme-switch').text(darkmodeText.dark);
+            switchAvatar();
         });
+        function switchAvatar(){
+            if($('body').hasClass("dark-theme")){
+               $('#dark_avatar').show();
+               $('#light_avatar').hide();
+            } else {
+               $('#dark_avatar').hide();
+               $('#light_avatar').show();
+
+            }
+        }
     </script>
 </body>
 

@@ -1,4 +1,3 @@
-
 body {
     padding: 0;
     margin: 0;
@@ -57,6 +56,9 @@ body {
 }
 
 
+.overflow {
+	overflow: hidden;
+}
 
 .overlay {
 	background-color: rgba(4,14,22,.83);
@@ -64,6 +66,7 @@ body {
 	width: 100%;
 	padding-bottom: 80px;
 }
+
 
 
 #portfolio {
@@ -136,7 +139,7 @@ body {
 
 .description .tools li {
 	margin-top: 5px;
-	background-color: #114190 !important;
+	background-color: #114190;
 	margin-right: 10px;
 	padding: 10px;
 	color: #F0F0F0;
@@ -153,9 +156,9 @@ body {
 }
 
 #portfolio div:nth-child(even) section {
-	background-color: #D1D1D1;
+	background-color: #3D3636;
 	padding: 10px;
-	border: 3px solid #B5B5B5;
+	border: 3px solid #393333;
 }
 
 #portfolio img {
@@ -218,64 +221,173 @@ body {
 }
 
 
-.moon{
-	font-size: 29px;
-	padding-left: 60px;
-	color:white;
-	top: 40px;
-	left: 75px;
-	position:fixed;
+@media screen and (max-width: 1200px) {
+	#portfolio [class^="col"] section {
+		width: 80%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 10px;
+		min-height: 400px;
+	}
+
+	#portfolio .overlay {
+		width: 100%;
+		height: auto;
+	}
+
+	#portfolio img {
+		width: 100%;
+		height: auto;
+	}
+
+	#portfolio section:hover .overlay .heading span {
+	 -webkit-transform: rotate(90deg);
+	 top: 70px;
+	 left: -240px;
+	 position: relative;
+	}
+	#portfolio div:nth-child(even) section {
+		background-color: #3D3636;
+		padding: 5px;
+		border: 3px solid #393333;
+	}
+	.container_portfolio {
+		width: 90% ! important;
+	}
 }
 
-.sun{
-	font-size: 29px;
-	padding-left: 60px;
-	color:white;
-    top: 40px;
-    left: -30px;
-	position:fixed;
+@media screen and (max-width: 790px) {
+
+	#portfolio .description p {
+		margin-top: 40px;
+	}
+
+	#portfolio section {
+		font-size: 10px;
+	}
+
+	#portfolio .overlay > * {
+		font-size: 200%;
+	}
+
+	#portfolio p, h6 {
+		text-align: left;
+	}
+
+	#contact textarea {
+		width: 90%;
+	}
 }
 
+@media screen and (max-width: 570px) {
+
+	#portfolio h2 {
+		margin-bottom: 0;
+	}
+
+	#portfolio section img {
+		display: none;
+	}
+
+	#portfolio section {
+		width: 100%;
+	}
+
+	#portfolio .description > *  {
+		display: block;
+	}
+
+	#portfolio .description {
+		display: table-footer-group;
+	}
+
+	#portfolio .heading {
+		display: table-header-group;
+		font-size: 180%;
+		text-align: left;
+	}
+
+	#portfolio .overlay {
+		min-height: auto;
+		padding: 20px;
+	}
+
+	#portfolio .description {
+		top: 100px;
+		position: static;
+	}
+
+	#portfolio section {
+		min-height: auto;
+	}
+
+	#portfolio section:hover .overlay .heading {
+	 position: relative;
+	 top: -0px;
+	 color: white;
+	 -webkit-transition: none;
+	}
+
+	#portfolio .heading span {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	
+	.social-links li {
+		display: block;
+		width: 100%;
+	}
+
+	.social-links {
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 300%;
+	}
+
+	#about img {
+		width: 60%;
+	}
+
+	#skill-set #web-development-skills::before {
+		display: none;
+	}
+
+	#skill-set .skills {
+		width: 100%;
+		display: block;
+	}
+
+	#portfolio .overlay {
+		height: 70%;
+	}
+
+}
 
 .darkmode{
-	position: fixed;
-    top: 40px;
-    left: 60px;
-	z-index: 99;
-	text-align: center;
-}
-
-.theme-switch {
-	color: #fff;
-	position: fixed;
-
-    font-size: 18px;
-    outline: none;
-    cursor: pointer;
-	padding: 15px;
-	width: 70px;
-	height: 30px;
-	border-radius: 50px;
-	background:  #f85c37;
+	display: block;
+    transition: 0.3s;
+    color: #818181;
+	padding: 8px 8px 8px 32px;
+	cursor:pointer;
+	margin-top:40px;
+    font-size: 20px;
 
 }
 
 .theme-switch .switch {
-	background: white;
 	width: 24px;
 	height: 24px;
-	background: #FFF;
 	border-radius: 100%;
 	position: absolute;
 	top: 3px;
 	left: 4px;
 	transition: 0.5s all ease;
 }
-  
-.dark-theme .theme-switch {
-	background: #000;
-	border: solid 1px;
-}
+
 .dark-theme .theme-switch .switch {
 	transform: translateX(37px);
 }
@@ -286,7 +398,6 @@ body {
 .dark-theme #resume {
 	background: #000; 
 }
-
 
 .dark-theme .desc p {
 	color: #FFF;
@@ -307,7 +418,7 @@ body {
 }
 
 .dark-theme h5 {
-	color: white;
+    color: #818181;
 }
 
 .dark-theme .backTop {
@@ -339,4 +450,12 @@ body {
 }
 .dark-theme .moon {
 	color: white;
+}
+
+.avatar{
+	width: 200px;
+	height: 230px; 
+	margin-bottom:30px;
+	margin-top:15px;
+
 }
