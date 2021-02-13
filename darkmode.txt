@@ -1,2 +1,0 @@
-partie blanche = #000
-partie bleu = #15202b

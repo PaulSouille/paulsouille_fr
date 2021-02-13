@@ -206,6 +206,10 @@
 
  #headerwrap {
      background: url(../img/header-bg.jpeg) no-repeat center top;
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
      margin-top: 0px;
      padding-top: 140px;
      text-align: center;
