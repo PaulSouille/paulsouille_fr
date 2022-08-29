@@ -30,19 +30,16 @@
  h3,
  h4,
  h5{
-     font-family: "Raleway";
      font-weight: 300;
      color: #333;
  }
  
  .h1 {
      color: #EEEEEE;
-     font-family: "Raleway";
  }
  
  .h3 {
      color: #EEEEEE;
-     font-family: "Raleway";
  }
  /* Paragraph & Typographic */
  
@@ -361,26 +358,52 @@
     padding: 15px;
 }
   
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #FFF;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+.bar1, .bar2, .bar3 {
+width: 35px;
+height: 5px;
+background-color: #FFF;
+margin: 6px 0;
+transition: 0.4s;
+}
+
+.change .bar1 {
+-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+-webkit-transform: rotate(45deg) translate(-8px, -8px);
+transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.typed-cursor{
+    display:none;
+}
+
+.social_media {
+    font-size: 25px;
+}
+
+.sub_skill{
+    font-size:20px;
+}
+
+.vertical-line{
+    border-left: 1px solid white;
+    position:absolute;
+    height: 280px;
+    margin-top:20px
   }
 
-  .typed-cursor{
-      display:none;
-  }
+@media screen and (max-width: 1200px) {
+    .vertical-line {
+        display:none;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+}
